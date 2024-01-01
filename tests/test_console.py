@@ -93,7 +93,7 @@ class TestConsole(unittest.TestCase):
             self.assertEqual("** instance id missing **\n", file.getvalue())
         with patch('sys.stdout', new=StringIO()) as file:
             self.model1.onecmd("update Review 5678")
-            self.assertEqual("** no instance found  **\n", file.getvalue())
+            self.assertEqual("** no instance found **\n", file.getvalue())
 
     def tearDown(self):
         """ Tear down function to destroy the model instance"""
